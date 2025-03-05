@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Document</title>
+
+  <style>
+    div li {
+      color: red;
+      transition: color 3s;
+    }
+
+    li:hover {
+      color: blue;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form>
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username">
+    </div>
+
+    <div>
+      <label for="password"> Password:</label>
+      <input type="password" name="password" id="password">
+    </div>
+    <div>
+      <label for="bio">Bio:</label>
+      <textarea rows="4" cols="50" id="bio" name="bio"></textarea>
+    </div>
+
+    <div>
+      <label>Favorite Car Manufacturer:</label>
+      <select name="favorite">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="audi">Audi</option>
+      </select>
+    </div>
+    <div>
+      <label>Are you military?</label>
+      <input type="radio" value="yes" name="military">Yes
+      <input type="radio" value="no" name="military">No
+    </div>
+
+    <div>
+      <label>Dieraty Restrictions?</label>
+      <input type="checkbox" value="yes" name="restriction">Yes
+      <input type="checkbox" value="no" name="restriction">No
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <div>
+    <li>Some Content</li>
+  </div>
+
+  <div>
+    <ul>
+      <li>Another Content</li>
+    </ul>
+  </div>
+
+</body>
+
+</html>
