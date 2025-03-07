@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Todo List:</h1>
+
+  <label>Todo Item:</label>
+  <input id="newTodo" type="text">
+  <button id="addTodo">Add Todo Item</button>
+
+  <div>
+    <ul id="todos">
+    </ul>
+
+    <!-- <div id="deleteExample">Delete Me here <button onclick="deleteElement(event)">Delete Me</button></div> -->
+    <!-- <div id="deleteExample">Delete Me here <button id="deleteButton">Delete Me</button></div> -->
+  </div>
+
+  <script>
+    const todoButton = document.getElementById('addTodo');
+    document.getElementById("deleteButton").addEventListener('click', deleteElement)
+
+    function deleteElement(event) {
+      console.log(event)
+      console.log(event.target)
+      console.log(event.target.parentElement)
+      event.target.parentElement.remove()
+      // document.getElementById("deleteExample").remove()
+    }
+
+    todoButton.addEventListener('click', addTodo)
+
+    function addTodo() {
+      let newTodoValue = document.getElementById("newTodo").value
+      let newTodoItem = document.createElement("li")
+      newTodoItem.innerText = newTodoValue;
+
+      let deleteButton = document.createElement("button");
+      deleteButton.innerText = "Delete Todo";
+      deleteButton.addEventListener('click', deleteElement);
+      newTodoItem.appendChild(deleteButton)
+
+      document.getElementById('todos').appendChild(newTodoItem)
+    }
+  </script>
+
+</body>
+
+</html>

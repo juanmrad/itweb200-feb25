@@ -1,0 +1,31 @@
+h5 {
+  color: orange
+}
+
+/* This adds the color green and increase font size */
+.special-text.superSized {
+  color: rgba(1, 86, 89, 0.2);
+  font-size: 30px;
+}
+
+.special-text {
+  color: #d65d12;
+}
+
+p {
+  color: brown;
+}
+
+body {
+  background-color: lightgray;
+}
+
+#subTitle {
+  color: red;
+}
+
+h6 {
+  color: green;
+  font-size: 30px;
+  margin: 0;
+}
